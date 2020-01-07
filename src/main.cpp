@@ -16,7 +16,7 @@
 #include "mqtt.h"
 
 // Firmware info
-#define FIRMWARE_FILENAME "feather_huzzah_esp8266-arduino-loran_wifi_bridge"
+#define FIRMWARE_NAME "bridge-HUZZAHESP8266-arduino"
 #define FIRMWARE_VERSION "1.1"
 
 // WiFi credentials
@@ -51,7 +51,7 @@ void setup()
   Serial.begin(115200);
   delay(1000);
 
-  util::printBanner(FIRMWARE_FILENAME, FIRMWARE_VERSION, DEVICE_ID);
+  util::printBanner(FIRMWARE_NAME, FIRMWARE_VERSION, DEVICE_ID);
 
   mqtt::start(DEVICE_ID, MQTT_SERVER_IP);
   Blynk.begin(BLINK_AUTH, SSID_NAME, SSID_PASS);
